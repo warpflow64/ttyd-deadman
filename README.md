@@ -32,7 +32,7 @@ cp /path/to/deadman ./deadman
 ### 2. deadman の設定ファイルを用意
 
 ```bash
-cp /path/to/your/deadman.yaml ./deadman.yaml
+cp /path/to/your/deadman.conf ./deadman.conf
 ```
 
 ### 3. 起動
