@@ -1,4 +1,4 @@
-# deadman-ttyd
+# ttyd-deadman
 
 deadman を ttyd 経由でブラウザから閲覧専用で配信する Docker 構成です。
 NOC部屋のサーバで動かし、会場スタッフがスマホ・ノートPCのブラウザから状態を確認できます。

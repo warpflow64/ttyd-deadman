@@ -1,7 +1,7 @@
 services:
-  deadman-ttyd:
+  ttyd-deadman:
     build: .
-    container_name: deadman-ttyd
+    container_name: ttyd-deadman
     restart: unless-stopped
 
     ports:
