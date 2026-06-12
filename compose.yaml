@@ -1,0 +1,26 @@
+services:
+  deadman-ttyd:
+    build: .
+    container_name: deadman-ttyd
+    restart: unless-stopped
+
+    ports:
+      - "7681:7681"
+
+    # ping を打つために必要（NET_RAW がないと ICMP が使えない）
+    cap_add:
+      - NET_RAW
+
+    environment:
+      # Basic認証をかけたい場合: "user:password" 形式で設定
+      # TTYD_CREDENTIAL: "noc:password123"
+
+      TTYD_PORT: "7681"
+      DEADMAN_CONFIG: "/etc/deadman/deadman.conf"
+
+    volumes:
+      # 設定ファイルを外から差し込む場合
+      - ./deadman.conf:/etc/deadman/deadman.conf:ro
+
+    # NOCネットワーク内での名前解決が必要な場合は host モードも選択肢
+    # network_mode: host
