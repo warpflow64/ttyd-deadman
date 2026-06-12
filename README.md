@@ -10,7 +10,7 @@ NOC部屋のサーバで動かし、会場スタッフがスマホ・ノートPC
     ↓
 [ttyd]    → read-only でブラウザに配信
     ↓
-http://noc-server:7681 でスタッフが閲覧
+http://localhost:7681 でスタッフが閲覧
 ```
 
 ## 使い方
@@ -81,5 +81,5 @@ chromium-browser \
   --kiosk \
   --noerrdialogs \
   --disable-infobars \
-  "http://noc-server:7681"
+  "http://localhost:7681"
 ```
